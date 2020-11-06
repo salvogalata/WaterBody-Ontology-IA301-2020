@@ -1,1089 +1,1693 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/zak/ontologies/2020/9/untitled-ontology-3#"
-     xml:base="http://www.semanticweb.org/zak/ontologies/2020/9/untitled-ontology-3"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:Masses_d_eau="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#exchangesWaterWith -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#exchangesWaterWith">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#feedsWaterTo -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#feedsWaterTo">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#isFedWaterBy"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasChemicalStatus -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasChemicalStatus">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatus"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasDegreeOfArtificiality -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasDegreeOfArtificiality">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificiality"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasEcologicalStatus -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasEcologicalStatus">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasQuantitativeStatus -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasQuantitativeStatus">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#GroundWaterBody"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatus"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#isFedWaterBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#isFedWaterBy">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#isPressuredBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#isPressuredBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyPressure"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasName -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasName">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Aquifer -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Aquifer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#GroundWaterBody"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ConfinedGroundWater"/>
-        <rdfs:comment>A body of groundwater below a subsurface layer or layers of rock or other geological strata of sufficient porosity and permeability to allow either a significant flow of groundwater or the abstraction of significant quantities of groundwater.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatus -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatus">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusBad"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusUnknown"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyStatus"/>
-        <rdfs:comment>Related to the chemical pollution of the body of water.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#SurfaceWaterBody"/>
-        <rdfs:comment>Surface water on the landward side of a line, every point of which is at a distance of one nautical mile on the seaward side from the nearest point of the baseline from which the breadth of territorial waters is measured, extending where appropriate up to the outer limit of transitional waters.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ConfinedGroundWater -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ConfinedGroundWater">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#GroundWaterBody"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificiality -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificiality">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityArtificial"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityHeavilyModified"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNotRelevant"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusBad"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusGood"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusIntermediate"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusNotRelevant"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusUnknown"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusVeryGood"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyStatus"/>
-        <rdfs:comment>It is an expression of the quality of the structure and functioning of aquatic ecosystems associated with surface waters.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EndangeredWaterBody -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EndangeredWaterBody">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasEcologicalStatus"/>
-                                <owl:someValuesFrom>
-                                    <owl:Class>
-                                        <owl:oneOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusBad"/>
-                                            <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
-                                        </owl:oneOf>
-                                    </owl:Class>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasChemicalStatus"/>
-                                <owl:hasValue rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusBad"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasQuantitativeStatus"/>
-                                <owl:hasValue rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusBad"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#GroundWaterBody -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#GroundWaterBody">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#SurfaceWaterBody"/>
-        <rdfs:comment>All water which is below the surface of the ground in the saturation zone and in direct contact with the ground or subsoil.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#IsolatedWaterBody -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#IsolatedWaterBody">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Class>
-                                <owl:complementOf>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#feedsWaterTo"/>
-                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-                                    </owl:Restriction>
-                                </owl:complementOf>
-                            </owl:Class>
-                            <owl:Class>
-                                <owl:complementOf>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#isFedWaterBy"/>
-                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-                                    </owl:Restriction>
-                                </owl:complementOf>
-                            </owl:Class>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:complementOf>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#exchangesWaterWith"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-                            </owl:Restriction>
-                        </owl:complementOf>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#SurfaceWaterBody"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lake -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lake">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#SurfaceWaterBody"/>
-        <rdfs:comment>A body of standing inland surface water.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#NotIsolatedWaterBody -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#NotIsolatedWaterBody">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#exchangesWaterWith"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#feedsWaterTo"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#isFedWaterBy"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PollutedWaterBody -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PollutedWaterBody">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#isPressuredBy"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:oneOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
-                                </owl:oneOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PollutionRiskWaterBody -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PollutionRiskWaterBody">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#isFedWaterBy"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PollutedWaterBody"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatus -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatus">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusBad"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusGood"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusUnknown"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyStatus"/>
-        <rdfs:comment>Applies only to groundwaters.It is an expression of the degree to which a body of groundwater is affected by direct and indirect abstractions. 
-
-The quantitative status of a body of groundwater may have an impact on the ecological quality of surface waters and terrestrial ecosystems associated with that groundwater body.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#SurfaceWaterBody"/>
-        <rdfs:comment>A body of inland water flowing for the most part on the surface of the land but which may flow underground for part of its course.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#SurfaceWaterBody -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#SurfaceWaterBody">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
-        <rdfs:comment>Inland waters, transitional waters and coastal waters. Except groundwater.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasChemicalStatus"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatus"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasEcologicalStatus"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#isPressuredBy"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyPressure"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>A generic mass of water be it on the land surface or underground.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyPressure -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyPressure">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureAbstraction"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureHydromorphology"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureOthers"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:comment>Intended as anthropopressure, i.e. human originated external factors that can significantly influence the status of a body of water.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyStatus -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyStatus">
-        <rdfs:comment>A set of attributed that define the status of a body of water.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusBad -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusBad">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatus"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatus"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusUnknown -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusUnknown">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatus"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon1"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon2"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon3"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon4"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusBad"/>
-        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
-        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusIntermediate"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureOthers"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frontignan-Pointe de l&apos;espiguette</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityArtificial -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityArtificial">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificiality"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityHeavilyModified -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityHeavilyModified">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificiality"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificiality"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNotRelevant -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNotRelevant">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificiality"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusBad -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusBad">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusGood -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusGood">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusIntermediate -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusIntermediate">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusNotRelevant -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusNotRelevant">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusUnknown -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusUnknown">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusVeryGood -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusVeryGood">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#GroundWater1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#GroundWater1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#GroundWaterBody"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater1"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon1"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon2"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon3"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon4"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River2"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River3"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River4"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River5"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River6"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River7"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River8"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusBad"/>
-        <Masses_d_eau:hasQuantitativeStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusGood"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alluvions anciennes entre Vidourle et Lez et littoral entre Montpellier et Sete</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Groundwater2 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Groundwater2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#GroundWaterBody"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
-        <Masses_d_eau:hasQuantitativeStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusGood"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calcaires jurassiques pli ouest de Montpellier - unite Plaissan-Villeveyrac</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater1"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusBad"/>
-        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
-        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusBad"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureOthers"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Etang de l Or</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon2 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater1"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusBad"/>
-        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
-        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureOthers"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Etangs Palavasiens Est</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon3 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon3">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater1"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusBad"/>
-        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
-        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureOthers"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Etangs Palavasiens Ouest</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon4 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon4">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater1"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
-        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
-        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusBad"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Etang du Ponant</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lake1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lake1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lake"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
-        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityArtificial"/>
-        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusIntermediate"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">etang du malsaucy</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureAbstraction -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureAbstraction">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyPressure"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyPressure"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureHydromorphology -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureHydromorphology">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyPressure"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureOthers -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureOthers">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyPressure"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyPressure"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusBad -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusBad">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatus"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusGood -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusGood">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatus"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusUnknown -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusUnknown">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatus"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River2"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
-        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
-        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L aigues Vives</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River10 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River10">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River4"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
-        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
-        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusIntermediate"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ruisseau la lironde</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River11 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River11">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River4"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
-        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
-        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusGood"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">le rieu coulon</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River12 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River12">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River7"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
-        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
-        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Le berbian</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River13 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River13">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River15"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
-        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
-        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Mosson de sa source au ruisseau de Miege Sole</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River14 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River14">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River13"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
-        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
-        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusGood"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ruisseau de la garonne</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River15 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River15">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River8"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
-        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
-        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusIntermediate"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Mosson du ruisseau du Miège Sole au reuisseau du Coulazou</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River2 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon1"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
-        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
-        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Cadoule</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River3 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River3">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon1"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
-        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
-        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Le Salaison</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River4 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River4">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon2"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
-        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityHeavilyModified"/>
-        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusIntermediate"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureAbstraction"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Le Lez a l aval de Castelnau</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River5 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River5">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon4"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
-        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityHeavilyModified"/>
-        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusGood"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureAbstraction"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Le Vidourle de Sommieres a la mer</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River6 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River6">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon1"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
-        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
-        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusIntermediate"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Le Berange</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River7 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River7">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon1"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
-        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
-        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viredonne</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River8 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River8">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River4"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
-        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
-        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Mosson du ruisseau du Coulazou a la confluence avec le Lez</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River9 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River9">
-        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
-        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River4"/>
-        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
-        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityHeavilyModified"/>
-        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusGood"/>
-        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
-        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ruisseau le verdanson</Masses_d_eau:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // General axioms
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatus"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatus"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lake"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
-        </owl:members>
-    </rdf:Description>
-</rdf:RDF>
+     ontologyIRI="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau">
+    <Prefix name="" IRI="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="Masses_d_eau" IRI="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#"/>
+    <Declaration>
+        <Class IRI="#Aquifer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChemicalStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoastalWater"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConfinedGroundWater"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DegreeOfArtificiality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EcologicalStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EndangeredWaterBody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GroundWaterBody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IsolatedWaterBody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lagoon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lake"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NotIsolatedWaterBody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PollutedWaterBody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProbablyPollutedWaterBody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#QuantitativeStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#River"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SurfaceWaterBody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WaterBody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WaterBodyPressure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WaterBodyStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#exchangesWaterWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasQuantitativeStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isFedWaterBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPressuredBy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ChemicalStatusBad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ChemicalStatusGood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ChemicalStatusUnknown"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CoastalWater1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DegreeOfArtificialityArtificial"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DegreeOfArtificialityHeavilyModified"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DegreeOfArtificialityNatural"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DegreeOfArtificialityNotRelevant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EcologicalStatusBad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EcologicalStatusGood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EcologicalStatusIntermediate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EcologicalStatusNotRelevant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EcologicalStatusPoor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EcologicalStatusUnknown"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EcologicalStatusVeryGood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GroundWater1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Groundwater2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lagoon1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lagoon2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lagoon3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lagoon4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lake1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lake2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PressureAbstraction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PressureDiffusePollution"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PressureHydromorphology"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PressureOthers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PressurePointPollution"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuantitativeStatusBad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuantitativeStatusGood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuantitativeStatusUnknown"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#River1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#River10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#River11"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#River12"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#River13"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#River14"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#River15"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#River16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#River17"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#River2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#River3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#River4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#River5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#River6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#River7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#River8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#River9"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#ChemicalStatus"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#ChemicalStatusBad"/>
+            <NamedIndividual IRI="#ChemicalStatusGood"/>
+            <NamedIndividual IRI="#ChemicalStatusUnknown"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#DegreeOfArtificiality"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#DegreeOfArtificialityArtificial"/>
+            <NamedIndividual IRI="#DegreeOfArtificialityHeavilyModified"/>
+            <NamedIndividual IRI="#DegreeOfArtificialityNatural"/>
+            <NamedIndividual IRI="#DegreeOfArtificialityNotRelevant"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#EcologicalStatus"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#EcologicalStatusBad"/>
+            <NamedIndividual IRI="#EcologicalStatusGood"/>
+            <NamedIndividual IRI="#EcologicalStatusIntermediate"/>
+            <NamedIndividual IRI="#EcologicalStatusNotRelevant"/>
+            <NamedIndividual IRI="#EcologicalStatusPoor"/>
+            <NamedIndividual IRI="#EcologicalStatusUnknown"/>
+            <NamedIndividual IRI="#EcologicalStatusVeryGood"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#EndangeredWaterBody"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WaterBody"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasEcologicalStatus"/>
+                    <ObjectOneOf>
+                        <NamedIndividual IRI="#EcologicalStatusBad"/>
+                        <NamedIndividual IRI="#EcologicalStatusPoor"/>
+                    </ObjectOneOf>
+                </ObjectSomeValuesFrom>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#hasChemicalStatus"/>
+                    <NamedIndividual IRI="#ChemicalStatusBad"/>
+                </ObjectHasValue>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#hasQuantitativeStatus"/>
+                    <NamedIndividual IRI="#QuantitativeStatusBad"/>
+                </ObjectHasValue>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#IsolatedWaterBody"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WaterBody"/>
+            <ObjectIntersectionOf>
+                <ObjectComplementOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#feedsWaterTo"/>
+                        <Class IRI="#WaterBody"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectComplementOf>
+                <ObjectComplementOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#isFedWaterBy"/>
+                        <Class IRI="#WaterBody"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectComplementOf>
+            </ObjectIntersectionOf>
+            <ObjectComplementOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#exchangesWaterWith"/>
+                    <Class IRI="#WaterBody"/>
+                </ObjectSomeValuesFrom>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NotIsolatedWaterBody"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WaterBody"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#exchangesWaterWith"/>
+                    <Class IRI="#WaterBody"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#feedsWaterTo"/>
+                    <Class IRI="#WaterBody"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#isFedWaterBy"/>
+                    <Class IRI="#WaterBody"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PollutedWaterBody"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WaterBody"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#isPressuredBy"/>
+                <ObjectOneOf>
+                    <NamedIndividual IRI="#PressureDiffusePollution"/>
+                    <NamedIndividual IRI="#PressurePointPollution"/>
+                </ObjectOneOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ProbablyPollutedWaterBody"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WaterBody"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#isFedWaterBy"/>
+                <Class IRI="#PollutedWaterBody"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#QuantitativeStatus"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#QuantitativeStatusBad"/>
+            <NamedIndividual IRI="#QuantitativeStatusGood"/>
+            <NamedIndividual IRI="#QuantitativeStatusUnknown"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WaterBodyPressure"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#PressureAbstraction"/>
+            <NamedIndividual IRI="#PressureDiffusePollution"/>
+            <NamedIndividual IRI="#PressureHydromorphology"/>
+            <NamedIndividual IRI="#PressureOthers"/>
+            <NamedIndividual IRI="#PressurePointPollution"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Aquifer"/>
+        <Class IRI="#GroundWaterBody"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChemicalStatus"/>
+        <Class IRI="#WaterBodyStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CoastalWater"/>
+        <Class IRI="#SurfaceWaterBody"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConfinedGroundWater"/>
+        <Class IRI="#GroundWaterBody"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EcologicalStatus"/>
+        <Class IRI="#WaterBodyStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GroundWaterBody"/>
+        <Class IRI="#WaterBody"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lagoon"/>
+        <Class IRI="#SurfaceWaterBody"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lake"/>
+        <Class IRI="#SurfaceWaterBody"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QuantitativeStatus"/>
+        <Class IRI="#WaterBodyStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#River"/>
+        <Class IRI="#SurfaceWaterBody"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SurfaceWaterBody"/>
+        <Class IRI="#WaterBody"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WaterBody"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasChemicalStatus"/>
+            <Class IRI="#ChemicalStatus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WaterBody"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasEcologicalStatus"/>
+            <Class IRI="#EcologicalStatus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WaterBody"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPressuredBy"/>
+            <Class IRI="#WaterBodyPressure"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Aquifer"/>
+        <Class IRI="#ConfinedGroundWater"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ChemicalStatus"/>
+        <Class IRI="#EcologicalStatus"/>
+        <Class IRI="#QuantitativeStatus"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CoastalWater"/>
+        <Class IRI="#Lagoon"/>
+        <Class IRI="#Lake"/>
+        <Class IRI="#River"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GroundWaterBody"/>
+        <Class IRI="#SurfaceWaterBody"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#ChemicalStatus"/>
+        <NamedIndividual IRI="#ChemicalStatusBad"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ChemicalStatus"/>
+        <NamedIndividual IRI="#ChemicalStatusGood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ChemicalStatus"/>
+        <NamedIndividual IRI="#ChemicalStatusUnknown"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CoastalWater"/>
+        <NamedIndividual IRI="#CoastalWater1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DegreeOfArtificiality"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityArtificial"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DegreeOfArtificiality"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityHeavilyModified"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DegreeOfArtificiality"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityNatural"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DegreeOfArtificiality"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityNotRelevant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EcologicalStatus"/>
+        <NamedIndividual IRI="#EcologicalStatusBad"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EcologicalStatus"/>
+        <NamedIndividual IRI="#EcologicalStatusGood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EcologicalStatus"/>
+        <NamedIndividual IRI="#EcologicalStatusIntermediate"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EcologicalStatus"/>
+        <NamedIndividual IRI="#EcologicalStatusNotRelevant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EcologicalStatus"/>
+        <NamedIndividual IRI="#EcologicalStatusPoor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EcologicalStatus"/>
+        <NamedIndividual IRI="#EcologicalStatusUnknown"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EcologicalStatus"/>
+        <NamedIndividual IRI="#EcologicalStatusVeryGood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GroundWaterBody"/>
+        <NamedIndividual IRI="#GroundWater1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GroundWaterBody"/>
+        <NamedIndividual IRI="#Groundwater2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lagoon"/>
+        <NamedIndividual IRI="#Lagoon1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lagoon"/>
+        <NamedIndividual IRI="#Lagoon2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lagoon"/>
+        <NamedIndividual IRI="#Lagoon3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lagoon"/>
+        <NamedIndividual IRI="#Lagoon4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lake"/>
+        <NamedIndividual IRI="#Lake1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lake"/>
+        <NamedIndividual IRI="#Lake2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WaterBodyPressure"/>
+        <NamedIndividual IRI="#PressureAbstraction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WaterBodyPressure"/>
+        <NamedIndividual IRI="#PressureDiffusePollution"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WaterBodyPressure"/>
+        <NamedIndividual IRI="#PressureHydromorphology"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WaterBodyPressure"/>
+        <NamedIndividual IRI="#PressureOthers"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WaterBodyPressure"/>
+        <NamedIndividual IRI="#PressurePointPollution"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuantitativeStatus"/>
+        <NamedIndividual IRI="#QuantitativeStatusBad"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuantitativeStatus"/>
+        <NamedIndividual IRI="#QuantitativeStatusGood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuantitativeStatus"/>
+        <NamedIndividual IRI="#QuantitativeStatusUnknown"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#River"/>
+        <NamedIndividual IRI="#River1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#River"/>
+        <NamedIndividual IRI="#River10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#River"/>
+        <NamedIndividual IRI="#River11"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#River"/>
+        <NamedIndividual IRI="#River12"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#River"/>
+        <NamedIndividual IRI="#River13"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#River"/>
+        <NamedIndividual IRI="#River14"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#River"/>
+        <NamedIndividual IRI="#River15"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#River"/>
+        <NamedIndividual IRI="#River16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#River"/>
+        <NamedIndividual IRI="#River17"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#River"/>
+        <NamedIndividual IRI="#River2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#River"/>
+        <NamedIndividual IRI="#River3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#River"/>
+        <NamedIndividual IRI="#River4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#River"/>
+        <NamedIndividual IRI="#River5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#River"/>
+        <NamedIndividual IRI="#River6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#River"/>
+        <NamedIndividual IRI="#River7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#River"/>
+        <NamedIndividual IRI="#River8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#River"/>
+        <NamedIndividual IRI="#River9"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#CoastalWater1"/>
+        <NamedIndividual IRI="#Lagoon1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#CoastalWater1"/>
+        <NamedIndividual IRI="#Lagoon2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#CoastalWater1"/>
+        <NamedIndividual IRI="#Lagoon3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#CoastalWater1"/>
+        <NamedIndividual IRI="#Lagoon4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#CoastalWater1"/>
+        <NamedIndividual IRI="#ChemicalStatusBad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <NamedIndividual IRI="#CoastalWater1"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityNatural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#CoastalWater1"/>
+        <NamedIndividual IRI="#EcologicalStatusIntermediate"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#CoastalWater1"/>
+        <NamedIndividual IRI="#PressureDiffusePollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#CoastalWater1"/>
+        <NamedIndividual IRI="#PressureOthers"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#CoastalWater1"/>
+        <NamedIndividual IRI="#PressurePointPollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#GroundWater1"/>
+        <NamedIndividual IRI="#CoastalWater1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#GroundWater1"/>
+        <NamedIndividual IRI="#Lagoon1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#GroundWater1"/>
+        <NamedIndividual IRI="#Lagoon2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#GroundWater1"/>
+        <NamedIndividual IRI="#Lagoon3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#GroundWater1"/>
+        <NamedIndividual IRI="#Lagoon4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#GroundWater1"/>
+        <NamedIndividual IRI="#River2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#GroundWater1"/>
+        <NamedIndividual IRI="#River3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#GroundWater1"/>
+        <NamedIndividual IRI="#River4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#GroundWater1"/>
+        <NamedIndividual IRI="#River5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#GroundWater1"/>
+        <NamedIndividual IRI="#River6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#GroundWater1"/>
+        <NamedIndividual IRI="#River7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#GroundWater1"/>
+        <NamedIndividual IRI="#River8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#GroundWater1"/>
+        <NamedIndividual IRI="#ChemicalStatusBad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasQuantitativeStatus"/>
+        <NamedIndividual IRI="#GroundWater1"/>
+        <NamedIndividual IRI="#QuantitativeStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#GroundWater1"/>
+        <NamedIndividual IRI="#PressureDiffusePollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#Groundwater2"/>
+        <NamedIndividual IRI="#ChemicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasQuantitativeStatus"/>
+        <NamedIndividual IRI="#Groundwater2"/>
+        <NamedIndividual IRI="#QuantitativeStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#Lagoon1"/>
+        <NamedIndividual IRI="#CoastalWater1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#Lagoon1"/>
+        <NamedIndividual IRI="#ChemicalStatusBad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <NamedIndividual IRI="#Lagoon1"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityNatural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#Lagoon1"/>
+        <NamedIndividual IRI="#EcologicalStatusBad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#Lagoon1"/>
+        <NamedIndividual IRI="#PressureDiffusePollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#Lagoon1"/>
+        <NamedIndividual IRI="#PressureOthers"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#Lagoon1"/>
+        <NamedIndividual IRI="#PressurePointPollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#Lagoon2"/>
+        <NamedIndividual IRI="#CoastalWater1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#Lagoon2"/>
+        <NamedIndividual IRI="#ChemicalStatusBad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <NamedIndividual IRI="#Lagoon2"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityNatural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#Lagoon2"/>
+        <NamedIndividual IRI="#EcologicalStatusPoor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#Lagoon2"/>
+        <NamedIndividual IRI="#PressureDiffusePollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#Lagoon2"/>
+        <NamedIndividual IRI="#PressureOthers"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#Lagoon2"/>
+        <NamedIndividual IRI="#PressurePointPollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#Lagoon3"/>
+        <NamedIndividual IRI="#CoastalWater1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#Lagoon3"/>
+        <NamedIndividual IRI="#ChemicalStatusBad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <NamedIndividual IRI="#Lagoon3"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityNatural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#Lagoon3"/>
+        <NamedIndividual IRI="#EcologicalStatusPoor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#Lagoon3"/>
+        <NamedIndividual IRI="#PressureDiffusePollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#Lagoon3"/>
+        <NamedIndividual IRI="#PressureOthers"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#Lagoon3"/>
+        <NamedIndividual IRI="#PressurePointPollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#Lagoon4"/>
+        <NamedIndividual IRI="#CoastalWater1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#Lagoon4"/>
+        <NamedIndividual IRI="#ChemicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <NamedIndividual IRI="#Lagoon4"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityNatural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#Lagoon4"/>
+        <NamedIndividual IRI="#EcologicalStatusBad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#Lagoon4"/>
+        <NamedIndividual IRI="#PressureDiffusePollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#Lagoon4"/>
+        <NamedIndividual IRI="#PressurePointPollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#Lake1"/>
+        <NamedIndividual IRI="#ChemicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <NamedIndividual IRI="#Lake1"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityArtificial"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#Lake1"/>
+        <NamedIndividual IRI="#EcologicalStatusIntermediate"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#Lake1"/>
+        <NamedIndividual IRI="#PressureDiffusePollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#Lake1"/>
+        <NamedIndividual IRI="#PressurePointPollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#Lake2"/>
+        <NamedIndividual IRI="#River16"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#Lake2"/>
+        <NamedIndividual IRI="#ChemicalStatusBad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#Lake2"/>
+        <NamedIndividual IRI="#EcologicalStatusIntermediate"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#Lake2"/>
+        <NamedIndividual IRI="#PressureDiffusePollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#River1"/>
+        <NamedIndividual IRI="#River2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#River1"/>
+        <NamedIndividual IRI="#ChemicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <NamedIndividual IRI="#River1"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityNatural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#River1"/>
+        <NamedIndividual IRI="#EcologicalStatusPoor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#River1"/>
+        <NamedIndividual IRI="#PressureDiffusePollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#River1"/>
+        <NamedIndividual IRI="#PressurePointPollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#River10"/>
+        <NamedIndividual IRI="#River4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#River10"/>
+        <NamedIndividual IRI="#ChemicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <NamedIndividual IRI="#River10"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityNatural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#River10"/>
+        <NamedIndividual IRI="#EcologicalStatusIntermediate"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#River11"/>
+        <NamedIndividual IRI="#River4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#River11"/>
+        <NamedIndividual IRI="#ChemicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <NamedIndividual IRI="#River11"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityNatural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#River11"/>
+        <NamedIndividual IRI="#EcologicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#River12"/>
+        <NamedIndividual IRI="#River7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#River12"/>
+        <NamedIndividual IRI="#ChemicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <NamedIndividual IRI="#River12"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityNatural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#River12"/>
+        <NamedIndividual IRI="#EcologicalStatusPoor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#River12"/>
+        <NamedIndividual IRI="#PressureDiffusePollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#River12"/>
+        <NamedIndividual IRI="#PressurePointPollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#River13"/>
+        <NamedIndividual IRI="#River15"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#River13"/>
+        <NamedIndividual IRI="#ChemicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <NamedIndividual IRI="#River13"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityNatural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#River13"/>
+        <NamedIndividual IRI="#EcologicalStatusPoor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#River13"/>
+        <NamedIndividual IRI="#PressureDiffusePollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#River14"/>
+        <NamedIndividual IRI="#River13"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#River14"/>
+        <NamedIndividual IRI="#ChemicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <NamedIndividual IRI="#River14"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityNatural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#River14"/>
+        <NamedIndividual IRI="#EcologicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#River15"/>
+        <NamedIndividual IRI="#River8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#River15"/>
+        <NamedIndividual IRI="#ChemicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <NamedIndividual IRI="#River15"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityNatural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#River15"/>
+        <NamedIndividual IRI="#EcologicalStatusIntermediate"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#River16"/>
+        <NamedIndividual IRI="#River17"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#River16"/>
+        <NamedIndividual IRI="#ChemicalStatusUnknown"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#River16"/>
+        <NamedIndividual IRI="#EcologicalStatusUnknown"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#River17"/>
+        <NamedIndividual IRI="#ChemicalStatusUnknown"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#River17"/>
+        <NamedIndividual IRI="#EcologicalStatusUnknown"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#River2"/>
+        <NamedIndividual IRI="#Lagoon1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#River2"/>
+        <NamedIndividual IRI="#ChemicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <NamedIndividual IRI="#River2"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityNatural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#River2"/>
+        <NamedIndividual IRI="#EcologicalStatusPoor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#River2"/>
+        <NamedIndividual IRI="#PressureDiffusePollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#River2"/>
+        <NamedIndividual IRI="#PressurePointPollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#River3"/>
+        <NamedIndividual IRI="#Lagoon1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#River3"/>
+        <NamedIndividual IRI="#ChemicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <NamedIndividual IRI="#River3"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityNatural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#River3"/>
+        <NamedIndividual IRI="#EcologicalStatusPoor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#River3"/>
+        <NamedIndividual IRI="#PressureDiffusePollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#River3"/>
+        <NamedIndividual IRI="#PressurePointPollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#River4"/>
+        <NamedIndividual IRI="#Lagoon2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#River4"/>
+        <NamedIndividual IRI="#ChemicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <NamedIndividual IRI="#River4"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityHeavilyModified"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#River4"/>
+        <NamedIndividual IRI="#EcologicalStatusIntermediate"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#River4"/>
+        <NamedIndividual IRI="#PressureAbstraction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#River4"/>
+        <NamedIndividual IRI="#PressureDiffusePollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#River4"/>
+        <NamedIndividual IRI="#PressurePointPollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#River5"/>
+        <NamedIndividual IRI="#Lagoon4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#River5"/>
+        <NamedIndividual IRI="#ChemicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <NamedIndividual IRI="#River5"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityHeavilyModified"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#River5"/>
+        <NamedIndividual IRI="#EcologicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#River5"/>
+        <NamedIndividual IRI="#PressureAbstraction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#River5"/>
+        <NamedIndividual IRI="#PressurePointPollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#River6"/>
+        <NamedIndividual IRI="#Lagoon1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#River6"/>
+        <NamedIndividual IRI="#ChemicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <NamedIndividual IRI="#River6"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityNatural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#River6"/>
+        <NamedIndividual IRI="#EcologicalStatusIntermediate"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#River6"/>
+        <NamedIndividual IRI="#PressureDiffusePollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#River6"/>
+        <NamedIndividual IRI="#PressurePointPollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#River7"/>
+        <NamedIndividual IRI="#Lagoon1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#River7"/>
+        <NamedIndividual IRI="#ChemicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <NamedIndividual IRI="#River7"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityNatural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#River7"/>
+        <NamedIndividual IRI="#EcologicalStatusPoor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#River7"/>
+        <NamedIndividual IRI="#PressureDiffusePollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#River7"/>
+        <NamedIndividual IRI="#PressurePointPollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#River8"/>
+        <NamedIndividual IRI="#River4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#River8"/>
+        <NamedIndividual IRI="#ChemicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <NamedIndividual IRI="#River8"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityNatural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#River8"/>
+        <NamedIndividual IRI="#EcologicalStatusPoor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#River8"/>
+        <NamedIndividual IRI="#PressureDiffusePollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <NamedIndividual IRI="#River8"/>
+        <NamedIndividual IRI="#PressurePointPollution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <NamedIndividual IRI="#River9"/>
+        <NamedIndividual IRI="#River4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <NamedIndividual IRI="#River9"/>
+        <NamedIndividual IRI="#ChemicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <NamedIndividual IRI="#River9"/>
+        <NamedIndividual IRI="#DegreeOfArtificialityHeavilyModified"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <NamedIndividual IRI="#River9"/>
+        <NamedIndividual IRI="#EcologicalStatusGood"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#CoastalWater1"/>
+        <Literal>Frontignan-Pointe de l&apos;espiguette</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#GroundWater1"/>
+        <Literal>Alluvions anciennes entre Vidourle et Lez et littoral entre Montpellier et Sete</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Groundwater2"/>
+        <Literal>Calcaires jurassiques pli ouest de Montpellier - unite Plaissan-Villeveyrac</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Lagoon1"/>
+        <Literal>Etang de l Or</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Lagoon2"/>
+        <Literal>Etangs Palavasiens Est</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Lagoon3"/>
+        <Literal>Etangs Palavasiens Ouest</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Lagoon4"/>
+        <Literal>Etang du Ponant</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Lake1"/>
+        <Literal>etang du malsaucy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#River1"/>
+        <Literal>L aigues Vives</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#River10"/>
+        <Literal>ruisseau la lironde</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#River11"/>
+        <Literal>le rieu coulon</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#River12"/>
+        <Literal>Le berbian</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#River13"/>
+        <Literal>La Mosson de sa source au ruisseau de Miege Sole</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#River14"/>
+        <Literal>ruisseau de la garonne</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#River15"/>
+        <Literal>La Mosson du ruisseau du Miège Sole au reuisseau du Coulazou</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#River17"/>
+        <Literal>Fleuve de bourrasque</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#River2"/>
+        <Literal>La Cadoule</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#River3"/>
+        <Literal>Le Salaison</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#River4"/>
+        <Literal>Le Lez a l aval de Castelnau</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#River5"/>
+        <Literal>Le Vidourle de Sommieres a la mer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#River6"/>
+        <Literal>Le Berange</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#River7"/>
+        <Literal>Viredonne</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#River8"/>
+        <Literal>La Mosson du ruisseau du Coulazou a la confluence avec le Lez</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#River9"/>
+        <Literal>ruisseau le verdanson</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <ObjectProperty IRI="#isFedWaterBy"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasQuantitativeStatus"/>
+    </FunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#exchangesWaterWith"/>
+    </SymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#exchangesWaterWith"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#isFedWaterBy"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#exchangesWaterWith"/>
+        <ObjectUnionOf>
+            <Class IRI="#CoastalWater"/>
+            <Class IRI="#Lagoon"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <Class IRI="#WaterBody"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <Class IRI="#WaterBody"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <Class IRI="#WaterBody"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <Class IRI="#WaterBody"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasQuantitativeStatus"/>
+        <Class IRI="#GroundWaterBody"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isFedWaterBy"/>
+        <Class IRI="#WaterBody"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <Class IRI="#WaterBody"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#exchangesWaterWith"/>
+        <ObjectUnionOf>
+            <Class IRI="#CoastalWater"/>
+            <Class IRI="#Lagoon"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#feedsWaterTo"/>
+        <Class IRI="#WaterBody"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasChemicalStatus"/>
+        <Class IRI="#ChemicalStatus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDegreeOfArtificiality"/>
+        <Class IRI="#DegreeOfArtificiality"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasEcologicalStatus"/>
+        <Class IRI="#EcologicalStatus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasQuantitativeStatus"/>
+        <Class IRI="#QuantitativeStatus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isFedWaterBy"/>
+        <Class IRI="#WaterBody"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isPressuredBy"/>
+        <Class IRI="#WaterBodyPressure"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasName"/>
+        <Class IRI="#WaterBody"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Aquifer</IRI>
+        <Literal>A body of groundwater below a subsurface layer or layers of rock or other geological strata of sufficient porosity and permeability to allow either a significant flow of groundwater or the abstraction of significant quantities of groundwater.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ChemicalStatus</IRI>
+        <Literal>Related to the chemical pollution of the body of water.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CoastalWater</IRI>
+        <Literal>Surface water on the landward side of a line, every point of which is at a distance of one nautical mile on the seaward side from the nearest point of the baseline from which the breadth of territorial waters is measured, extending where appropriate up to the outer limit of transitional waters.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EcologicalStatus</IRI>
+        <Literal>It is an expression of the quality of the structure and functioning of aquatic ecosystems associated with surface waters.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GroundWaterBody</IRI>
+        <Literal>All water which is below the surface of the ground in the saturation zone and in direct contact with the ground or subsoil.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Lake</IRI>
+        <Literal>A body of standing inland surface water.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#QuantitativeStatus</IRI>
+        <Literal>Applies only to groundwaters.It is an expression of the degree to which a body of groundwater is affected by direct and indirect abstractions. 
+
+The quantitative status of a body of groundwater may have an impact on the ecological quality of surface waters and terrestrial ecosystems associated with that groundwater body.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#River</IRI>
+        <Literal>A body of inland water flowing for the most part on the surface of the land but which may flow underground for part of its course.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SurfaceWaterBody</IRI>
+        <Literal>Inland waters, transitional waters and coastal waters. Except groundwater.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WaterBody</IRI>
+        <Literal>A generic mass of water be it on the land surface or underground.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WaterBodyPressure</IRI>
+        <Literal>Intended as anthropopressure, i.e. human originated external factors that can significantly influence the status of a body of water.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WaterBodyStatus</IRI>
+        <Literal>A set of attributed that define the status of a body of water.</Literal>
+    </AnnotationAssertion>
+</Ontology>
 
 
 
