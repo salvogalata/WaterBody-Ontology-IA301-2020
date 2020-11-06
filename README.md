@@ -5,6 +5,6 @@ Ontology project for the IA301 course on Symbolic AI, Mastère Specialisé at Te
 Authors: I-Thang HIU, Alan ZAKAR, Salvatore Galatà
 
 This repository contains the following files:
- - A report on the ontology: Galata_salvatore-AND-Hiu_I-Tang-AND-Zakar-Alan.pdf
- - The actual ontology: WaterBody-Ontology-IA301.owl
+ - A report on the ontology: `Galata_salvatore-AND-Hiu_I-Tang-AND-Zakar-Alan.pdf`
+ - The actual ontology: `WaterBody-Ontology-IA301.owl`
  - A directory `data` containing an excel data file and the json rules for importing it in the ontology.
