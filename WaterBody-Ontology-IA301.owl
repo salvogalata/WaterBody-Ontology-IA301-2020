@@ -1,0 +1,1091 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/zak/ontologies/2020/9/untitled-ontology-3#"
+     xml:base="http://www.semanticweb.org/zak/ontologies/2020/9/untitled-ontology-3"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Masses_d_eau="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#exchangesWaterWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#exchangesWaterWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#feedsWaterTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#feedsWaterTo">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#isFedWaterBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasChemicalStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasChemicalStatus">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasDegreeOfArtificiality -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasDegreeOfArtificiality">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificiality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasEcologicalStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasEcologicalStatus">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasQuantitativeStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasQuantitativeStatus">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#GroundWaterBody"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#isFedWaterBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#isFedWaterBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#isPressuredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#isPressuredBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyPressure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Aquifer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Aquifer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#GroundWaterBody"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ConfinedGroundWater"/>
+        <rdfs:comment>A body of groundwater below a subsurface layer or layers of rock or other geological strata of sufficient porosity and permeability to allow either a significant flow of groundwater or the abstraction of significant quantities of groundwater.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatus">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusBad"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusUnknown"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyStatus"/>
+        <rdfs:comment>Related to the chemical pollution of the body of water.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#SurfaceWaterBody"/>
+        <rdfs:comment>Surface water on the landward side of a line, every point of which is at a distance of one nautical mile on the seaward side from the nearest point of the baseline from which the breadth of territorial waters is measured, extending where appropriate up to the outer limit of transitional waters.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ConfinedGroundWater -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ConfinedGroundWater">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#GroundWaterBody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificiality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificiality">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityArtificial"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityHeavilyModified"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNotRelevant"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusBad"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusGood"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusIntermediate"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusNotRelevant"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusUnknown"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusVeryGood"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyStatus"/>
+        <rdfs:comment>It is an expression of the quality of the structure and functioning of aquatic ecosystems associated with surface waters.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EndangeredWaterBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EndangeredWaterBody">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasEcologicalStatus"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:oneOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusBad"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
+                                        </owl:oneOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasChemicalStatus"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusBad"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasQuantitativeStatus"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusBad"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#GroundWaterBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#GroundWaterBody">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#SurfaceWaterBody"/>
+        <rdfs:comment>All water which is below the surface of the ground in the saturation zone and in direct contact with the ground or subsoil.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#IsolatedWaterBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#IsolatedWaterBody">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#feedsWaterTo"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+                                    </owl:Restriction>
+                                </owl:complementOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#isFedWaterBy"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+                                    </owl:Restriction>
+                                </owl:complementOf>
+                            </owl:Class>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#exchangesWaterWith"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#SurfaceWaterBody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lake -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lake">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#SurfaceWaterBody"/>
+        <rdfs:comment>A body of standing inland surface water.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#NotIsolatedWaterBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#NotIsolatedWaterBody">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#exchangesWaterWith"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#feedsWaterTo"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#isFedWaterBy"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PollutedWaterBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PollutedWaterBody">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#isPressuredBy"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PollutionRiskWaterBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PollutionRiskWaterBody">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#isFedWaterBy"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PollutedWaterBody"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatus">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusBad"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusGood"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusUnknown"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyStatus"/>
+        <rdfs:comment>Applies only to groundwaters.It is an expression of the degree to which a body of groundwater is affected by direct and indirect abstractions. 
+
+The quantitative status of a body of groundwater may have an impact on the ecological quality of surface waters and terrestrial ecosystems associated with that groundwater body.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#SurfaceWaterBody"/>
+        <rdfs:comment>A body of inland water flowing for the most part on the surface of the land but which may flow underground for part of its course.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#SurfaceWaterBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#SurfaceWaterBody">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody"/>
+        <rdfs:comment>Inland waters, transitional waters and coastal waters. Except groundwater.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBody">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasChemicalStatus"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#hasEcologicalStatus"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#isPressuredBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyPressure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A generic mass of water be it on the land surface or underground.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyPressure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyPressure">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureAbstraction"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureHydromorphology"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureOthers"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Intended as anthropopressure, i.e. human originated external factors that can significantly influence the status of a body of water.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyStatus">
+        <rdfs:comment>A set of attributed that define the status of a body of water.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusBad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusBad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusUnknown -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusUnknown">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon1"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon2"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon3"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon4"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusBad"/>
+        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
+        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusIntermediate"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureOthers"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frontignan-Pointe de l&apos;espiguette</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityArtificial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityArtificial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificiality"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityHeavilyModified -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityHeavilyModified">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificiality"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificiality"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNotRelevant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNotRelevant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificiality"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusBad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusBad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusGood -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusGood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusIntermediate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusIntermediate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusNotRelevant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusNotRelevant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusUnknown -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusUnknown">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusVeryGood -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusVeryGood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#GroundWater1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#GroundWater1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#GroundWaterBody"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater1"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon1"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon2"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon3"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon4"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River2"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River3"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River4"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River5"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River6"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River7"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River8"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusBad"/>
+        <Masses_d_eau:hasQuantitativeStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusGood"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alluvions anciennes entre Vidourle et Lez et littoral entre Montpellier et Sete</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Groundwater2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Groundwater2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#GroundWaterBody"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
+        <Masses_d_eau:hasQuantitativeStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusGood"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calcaires jurassiques pli ouest de Montpellier - unite Plaissan-Villeveyrac</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater1"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusBad"/>
+        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
+        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusBad"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureOthers"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Etang de l Or</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater1"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusBad"/>
+        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
+        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureOthers"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Etangs Palavasiens Est</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater1"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusBad"/>
+        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
+        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureOthers"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Etangs Palavasiens Ouest</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater1"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
+        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
+        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusBad"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Etang du Ponant</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lake1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lake1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lake"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
+        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityArtificial"/>
+        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusIntermediate"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">etang du malsaucy</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureAbstraction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureAbstraction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyPressure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyPressure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureHydromorphology -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureHydromorphology">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyPressure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureOthers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureOthers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyPressure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#WaterBodyPressure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusBad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusBad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusGood -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusGood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusUnknown -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatusUnknown">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River2"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
+        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
+        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L aigues Vives</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River4"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
+        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
+        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusIntermediate"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ruisseau la lironde</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River4"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
+        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
+        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusGood"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">le rieu coulon</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River7"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
+        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
+        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Le berbian</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River15"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
+        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
+        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Mosson de sa source au ruisseau de Miege Sole</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River13"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
+        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
+        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusGood"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ruisseau de la garonne</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River8"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
+        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
+        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusIntermediate"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Mosson du ruisseau du Miège Sole au reuisseau du Coulazou</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon1"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
+        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
+        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Cadoule</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon1"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
+        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
+        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Le Salaison</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon2"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
+        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityHeavilyModified"/>
+        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusIntermediate"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureAbstraction"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Le Lez a l aval de Castelnau</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon4"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
+        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityHeavilyModified"/>
+        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusGood"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureAbstraction"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Le Vidourle de Sommieres a la mer</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon1"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
+        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
+        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusIntermediate"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Le Berange</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon1"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
+        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
+        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viredonne</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River4"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
+        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityNatural"/>
+        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusPoor"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressureDiffusePollution"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#PressurePointPollution"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Mosson du ruisseau du Coulazou a la confluence avec le Lez</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
+        <Masses_d_eau:feedsWaterTo rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River4"/>
+        <Masses_d_eau:hasChemicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatusGood"/>
+        <Masses_d_eau:hasDegreeOfArtificiality rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#DegreeOfArtificialityHeavilyModified"/>
+        <Masses_d_eau:hasEcologicalStatus rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatusGood"/>
+        <Masses_d_eau:isPressuredBy rdf:resource="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Hydromorphology"/>
+        <Masses_d_eau:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ruisseau le verdanson</Masses_d_eau:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#ChemicalStatus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#EcologicalStatus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#QuantitativeStatus"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#CoastalWater"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lagoon"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#Lake"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/zak/ontologies/2020/9/Masses_d_eau#River"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
