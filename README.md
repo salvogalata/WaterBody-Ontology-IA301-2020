@@ -1,6 +1,7 @@
 # WaterBody-Ontology-IA301-2020
 
 Ontology project for the IA301 course on Symbolic AI, Mastère Specialisé at Telecom Paris.
+
 Authors: I-Thang HIU, Alan ZAKAR, Salvatore Galatà
 
 This repository contains the following files:
